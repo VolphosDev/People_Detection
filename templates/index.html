@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ESP32-CAM Live Stream</title>
+</head>
+<body>
+    <h1>ESP32-CAM Live Stream (con detección)</h1>
+    <img src="/stream" width="800" height="600"/>
+
+    <script>
+        // Función para reproducir sonido cuando se detecta una persona
+        function playSound() {
+            var audio = new Audio('/static/deteccion.mp3');  // Asegúrate de que este archivo esté disponible en el servidor
+            audio.play();
+        }
+
+        // Función que se encarga de preguntar al servidor si hubo detección
+        async function checkDetection() {
+            try {
+                const response = await fetch('/check_detection');  // Hacer la petición al servidor
+                const data = await response.json();
+
+                if (data.detected) {
+                    playSound();  // Reproducir el sonido si se detectó una persona
+                }
+            } catch (error) {
+                console.error('Error checking detection:', error);
+            }
+        }
+
+        // Consultar cada 2 segundos si hubo detección
+        setInterval(checkDetection, 4000);
+    </script>    
+</body>
+</html>
