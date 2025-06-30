@@ -1,0 +1,13 @@
+scripts/dataset_stuffs/train
+scripts/dataset_stuffs/train_uttx
+__pycache__
+scripts/dataset_stuffs/train-annotations-bbox.csv
+scripts/dataset_stuffs/filter
+scripts/dataset_stuffs/logs
+no_person_10000.txt
+person_10000.txt
+scripts/dataset_stuffs/train_nohuman_stuffs
+scripts/stream_viewer/figuras_detectadas
+scripts/dataset_stuffs/test
+scripts/dataset_stuffs/class-descriptions-boxable.csv
+scripts/dataset_stuffs/person_20000.txt
