@@ -1,4 +1,6 @@
-scripts/dataset_stuffs/train
+scripts/dataset_stuffs/train/human_cctv/labelTxt
+scripts/dataset_stuffs/train/human_cctv/train
+scripts/dataset_stuffs/train/human_cctv/images
 scripts/dataset_stuffs/train_uttx
 __pycache__
 scripts/dataset_stuffs/train-annotations-bbox.csv
@@ -11,3 +13,7 @@ scripts/stream_viewer/figuras_detectadas
 scripts/dataset_stuffs/test
 scripts/dataset_stuffs/class-descriptions-boxable.csv
 scripts/dataset_stuffs/person_20000.txt
+scripts/dataset_stuffs/train/human_cctv/train_augmented
+scripts/dataset_stuffs/train/human-open
+scripts/dataset_stuffs/train/no_human
+scripts/dataset_stuffs/train/val_human_cctv

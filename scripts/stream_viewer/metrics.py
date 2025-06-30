@@ -11,7 +11,7 @@ import numpy as np
 warnings.filterwarnings("ignore", category=FutureWarning)
 
 # Paths
-MODEL_PATH = "../dataset_stuffs/train/human_cctv/human_cnn_final.pth"
+MODEL_PATH = "../dataset_stuffs/train/human_cctv/modelo_detector.pth"
 IMAGE_FOLDER = "../dataset_stuffs/test/images"
 LABEL_FOLDER = "../dataset_stuffs/test/labelTxt"
 
@@ -91,7 +91,7 @@ for run in range(NUM_RUNS):
                     pred = model(tensor_img).item()
                 patch_predictions.append(pred)
 
-        final_pred = 1 if any(p >= 0.5 for p in patch_predictions) else 0
+        final_pred = 1 if any(p >= 0.90 for p in patch_predictions) else 0
         y_true.append(1 if has_human else 0)
         y_pred.append(final_pred)
 
